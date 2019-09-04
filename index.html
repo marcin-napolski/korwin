@@ -6,6 +6,32 @@
     <body>
         
         <div id="app">
+            <!-- 
+                drop-down list for every JSON in parts array
+                it's binded to the value property
+            -->
+            <span v-for="part in parts">
+                <select v-model=part.value>
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
+                    <option value="4">5</option>
+                    <option value="5">6</option>
+                    <option value="6">7</option>
+                </select>
+            </span>
+
+            <div id="sentece">
+                <!--
+                    this might look complex but it's just 2d array
+                    coulumns[0..5][0..6].text
+                    "part" is not used but "index" wouldn't worki without it
+                -->
+                <i v-for="(part, index) in parts">
+                    {{columns[index][parts[index].value].text}}
+                </i>
+            </div>
 		{{ author }}
         </div>
             

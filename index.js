@@ -1,7 +1,8 @@
 var app = new Vue({
     el: '#app',
     data: {
-	author: 'Joker',
+      author: 'Janusz Korwin-Mikke',
+      parts: [{value:0},{value:0},{ value:0},{value:0},{value:0},{value:0}],
       columns: [
         [{ text: 'Ja chcę powiedzieć jedną rzecz:' },{ text: 'Trzeba powiedzieć jasno:' },{ text: 'Jak powiedział wybitny krakowianin Stanisław Lem,' },{ text: 'Proszę mnie dobrze zrozumieć:' },{ text: 'Ja chciałem państwu przypomnieć, że' },{ text: 'Niech państwo nie mają złudzen:' },{ text: 'Powiedzmy to wyraźnie:' }],
         [{ text: 'przedstawiciele czerwonej hołoty' },{ text: 'ci wszyscy (tfu!) geje' },{ text: 'funkcjonariusze reżimowej telewizji' },{ text: 'tak zwani ekolodzy' },{ text: 'ci wszyscy (tfu!) demokraci' },{ text: 'agenci bezpieki' },{ text: 'feminazistki' }],
