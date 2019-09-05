@@ -2,16 +2,20 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         
-        <div id="app">
+        <div id="app" align="center" class="container mt-3">
             <!-- 
                 drop-down list for every JSON in parts array
                 it's binded to the value property
             -->
             <span v-for="part in parts">
-                <select v-model=part.value>
+                <select v-model=part.value class="custom-select-sm">
                     <option value="0">1</option>
                     <option value="1">2</option>
                     <option value="2">3</option>
