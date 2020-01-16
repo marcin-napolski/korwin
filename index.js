@@ -149,5 +149,12 @@ var app = new Vue({
         { text: 'co lat temu sto nikomu nie przyszłoby nawet do głowy.' }
         ]
       ]
-    }
+    },
+    methods: {
+      random: function (event) {      
+        for (i = 0; i < 6; i++) {
+          this.parts[i].value = Math.floor(Math.random() * 22);;
+        }
+      }
+    },
   })
