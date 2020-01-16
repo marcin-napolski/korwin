@@ -8,37 +8,37 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        
         <div id="app" align="center" class="container mt-3">
             <!-- 
                 drop-down list for every JSON in parts array
                 it's binded to the value property
             -->
+
             <span v-for="part in parts">
+    
                 <select v-model=part.value class="custom-select-sm">
-                    <option value="0">1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
-                    <option value="4">5</option>
-                    <option value="5">6</option>
-                    <option value="6">7</option>
+                    <!-- for in for - would work with columns [1,2,3] as well as they are equally long -->
+                   <option v-for="(part, index) in columns[0]" :value="index">{{index + 1}}</option>
                 </select>
+
             </span>
 
             <div id="sentece">
+            <HR>  
                 <!--
                     this might look complex but it's just 2d array
-                    coulumns[0..5][0..6].text
-                    "part" is not used but "index" wouldn't worki without it
+                    coulumns[0..5][0..21].text
+                    "part" is not used but "index" wouldn't work without it
                 -->
                 <i v-for="(part, index) in parts">
                     {{columns[index][parts[index].value].text}}
                 </i>
             </div>
-		{{ author }}
-        </div>
-            
+            {{ author}}
+          <HR>
+            <button v-on:click="random">Random</button>   
+         </div>
+
         <script src="index.js"></script>
     </body>
 </html>
